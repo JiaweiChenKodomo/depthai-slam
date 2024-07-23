@@ -31,11 +31,11 @@ def correspondence_matrix(p1, p2):
 		p2x, p2y, np.ones(len(p1x))
 		]).T
 
-	return np.array([
-		p2x * p1x, p2x * p1y, p2x,
-        p2y * p1x, p2y * p1y, p2y,
-        p1x, p1y, np.ones(len(p1x))
-        ]).T
+	# return np.array([
+	# 	p2x * p1x, p2x * p1y, p2x,
+    #     p2y * p1x, p2y * p1y, p2y,
+    #     p1x, p1y, np.ones(len(p1x))
+    #     ]).T
 
 
 def compute_img_to_img_matrix(x1, x2, compute_essential=False):

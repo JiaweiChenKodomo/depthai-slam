@@ -26,6 +26,7 @@ def process(img):
 				[0,300,img_h/2],
 				[0,0,1]])
 	tripoints3d = []
+
 	if points1.ndim != 1 or points2.ndim != 1:
 		points1_norm = np.dot(np.linalg.inv(intrinsic), points1)
 		points2_norm = np.dot(np.linalg.inv(intrinsic), points2)

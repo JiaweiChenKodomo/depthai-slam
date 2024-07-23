@@ -10,10 +10,10 @@ pipeline = dai.Pipeline()
 
 # Define a source - color camera
 camRgb = pipeline.createColorCamera()
-camRgb.setBoardSocket(dai.CameraBoardSocket.RGB)
+camRgb.setBoardSocket(dai.CameraBoardSocket.CAM_A)
 camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)  		#1080
 # camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_12_MP)		#3040
-#camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_4_K)			#2160
+# camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_4_K)			#2160
 camRgb.setVideoSize(1000, 1000) ## CUSTOMIZE SIZE
 camRgb.setInterleaved(False)
 # camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
@@ -72,7 +72,7 @@ with dai.Device() as device:
 			display.display_points3d(xyz, pcd, visualizer)
 		else:
 			pass
-		if cv2.waitKey(1) == 27:
+		if cv2.waitKey(1) == 27:   # Esc
 			break
 
 

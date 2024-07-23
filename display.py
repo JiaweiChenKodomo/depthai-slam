@@ -32,9 +32,9 @@ class Display:
 	def display_points3d(self, tripoints3d, pcd, visualizer):
 		# open3d
 		if tripoints3d is not None:
-			pcd.clear()
+			# pcd.clear()
 			pcd.points = o3d.utility.Vector3dVector(tripoints3d)
-			visualizer.remove_geometry(pcd)
+			# visualizer.remove_geometry(pcd)
 			visualizer.add_geometry(pcd)
 			visualizer.poll_events()
 			visualizer.update_renderer()
